@@ -24,13 +24,13 @@ The information used by the visualizer is a combination of information from the 
 
 In these installation steps I am going to assume you already have a Docker Swarm setup and have a webserver with php and mysql running.
 
-Enable the Docker remote API (add a firewall rule to ensure only the webserver can access the remote API)
-Copy the contents from the webserver folder to the webserver.
-Create a mysql database on your webserver and run the webserver/databasestructure.sql to create the structure of the database.
-Edit the config.php file, change the database name, username and password for the database to the one you created.
-Set the url to the Docker remote API in the same config.php file.
-Copy the agent/agent.py script to the Swarm hosts, install Python 3 and install the modules imported by the script.
-Change the webserver address in the script to your webserver address.
-Run the script to test if it works.
-Add the script to crontab and run every 5 or 10 minutes.
-If everything is set up correctly you should now be able to request the index.php file and see the visualization of your Docker Swarm.
+1. Enable the Docker remote API (add a firewall rule to ensure only the webserver can access the remote API)
+2. Copy the contents from the webserver folder to the webserver.
+3. Create a mysql database on your webserver and run the webserver/databasestructure.sql to create the structure of the database.
+4. Edit the config.php file, change the database name, username and password for the database to the one you created.
+5. Set the url to the Docker remote API in the same config.php file.
+6. Copy the agent/agent.py script to the Swarm hosts, install Python 3 and install the modules imported by the script.
+7. Change the webserver address in the script to your webserver address.
+8. Run the script to test if it works.
+9. Add the script to crontab and run every 5 or 10 minutes.
+10. If everything is set up correctly you should now be able to request the index.php file and see the visualization of your Docker Swarm.
